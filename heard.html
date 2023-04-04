@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--
+        - custom css link
+      -->
+    <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+    <!--
+        - google font link
+      -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <section class="adding-item" id="item">
+        <div class="container">
+            <div class="cart-wrapper">
+                <div class="cart-title"><span>Your Cart</span></div>
+                <div class="cart-table">
+                    <table class="wrapper-table">
+                        <thead class="table-header">
+                            <tr class="table-row">
+                                <th>cart-image</th>
+                                <th>product Name</th>
+                                <th>price</th>
+                                <th>Quantity</th>
+                                <th>remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="jacket-wrapper">
+                                <td>
+                                    <div class="single-jaket-img">
+                                        <img src="./assets/images/products/jacket-1.jpg" width="100%" alt="jacket"
+                                            class="jacket-img">
+                                    </div>
+                                </td>
+                                <td>Jacket</td>
+                                <td>$48.00</td>
+                                <td><input type="number" class="quantity" value="0"></td>
+                                <td><ion-icon name="trash-outline" id="remove" type="button"></ion-icon></td>
+                            </tr>
+                            <tr id="jacket-wrapper">
+                                <td>
+                                    <div class="single-jaket-img">
+                                        <img src="./assets/images/products/jacket-3.jpg" width="100%" alt="jacket"
+                                            class="jacket-img">
+                                    </div>
+                                </td>
+                                <td>Jacket</td>
+                                <td>$48.00</td>
+                                <td><input type="number" class="quantity" value="0"></td>
+                                <td><ion-icon name="trash-outline" id="remove" type="button"></ion-icon></td>
+                                <!-- <button id="remove" type="remove"><ion-icon name="trash-outline"></ion-icon></button> -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+        - custom js link
+      -->
+    <script>
+        const jacket1 = document.getElementsByTagName('ion-icon');
+        const add = document.getElementsByTagName('ion-icon');
+        const adding = document.getElementsByTagName('tbody');
+
+        const jacket2 = document.getElementsByClassName('product-img');
+        const shirt = document.getElementsByTagName('tbody');
+
+
+
+
+        for (let i = 0; i < jacket2.length; i++) {
+            const adding = jacket2[i];
+            adding.addEventListener('click', (e) => {
+                const target = e.target;
+                alert('click hear');
+                const pro = shirt = jacket1.parentElement.parentElement.parentElement.add();
+                // shirt.parentElement.parentElement.add();
+                console.log(pro);
+            })
+        }
+
+
+
+
+
+        // const card_removes = document.querySelector('#jacket-wrapper');
+        // const removes = document.getElementsByClassName('hydrated')
+        // const products = document.getElementsByClassName('procuct-img');
+        // const cart = document.querySelector('.add-to-hear');
+
+
+        // for (let x = 0; x < products.length; x++) {
+        //     const pro = products[x];
+        //     pro.addEventListener('click', (event) => {
+        //         const select = event.target;
+        //         cart = select.parentElement.parentElement.add();
+        //     })
+        // }
+
+
+        for (let x = 0; x < jacket1.length; x++) {
+            const pro = jacket1[x];
+            pro.addEventListener('click', (event) => {
+                event.preventDefault();
+                const select = event.target;
+                select.parentElement.parentElement.remove();
+
+                alert('hello');
+            })
+        }
+
+        for (let x = 0; x < add.length; x++) {
+            const pro = add[x];
+            pro.addEventListener('click', (event) => {
+                event.preventDefault();
+                const select = event.target;
+                const toast = select.parentElement.parentElement.add();
+                adding = toast;
+
+                alert('hello');
+            })
+        }
+
+
+
+
+
+
+
+
+
+        for (let i = 0; i < remove.length; i++) {
+            const adding = removes[i];
+            adding.addEventListener('click', (event) => {
+
+                const time = event.target;
+                time.parentElement.parentElement.parentElement.parentElement.remove();
+
+            })
+        }
+
+
+        // remove.onclick = () => {
+
+        //     alert('this is clicked');
+        // }
+
+
+        // if (document.readyState == 'loading') {
+        //     document.addEventListener('DOMcontentLoaded', ready);
+        // } else {
+        //     ready();
+        // }
+        // const ready = () => {
+        //     let removeBtn = document.getElementsByClassName('remove');
+        //     for (let x = 0; x < removeBtn.length; x++) {
+        //         let button = removeBtn[x];
+        //         button.addEventListener('click', time);
+        //     }
+        // }
+        // function time(e) {
+        //     let btnClicked = e.target;
+        //     alert('this is clicked');
+        //     btnClicked.parentElement.remove();
+        // }
+    </script>
+
+
+
+
+
+
+    <!-- <script src="./assets/js/script.js"></script> -->
+    <script src="./assets/js/script.js"></script>
+    <!--
+        - ionicon link
+        -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
